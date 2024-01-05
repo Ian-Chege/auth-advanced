@@ -31,7 +31,7 @@ export const RegisterForm = () => {
     defaultValues: {
       email: "",
       password: "",
-      confirmPassword: "",
+      name: "",
     },
   });
 
@@ -97,16 +97,15 @@ export const RegisterForm = () => {
 
             <FormField
               control={form.control}
-              name="confirmPassword"
+              name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Confirm Password</FormLabel>
+                  <FormLabel>Name</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="********"
-                      type="password"
+                      placeholder="John Doe"
                     />
                   </FormControl>
                   <FormMessage {...field} />
